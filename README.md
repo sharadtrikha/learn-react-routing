@@ -68,3 +68,74 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+localhost:3000/ -> Show Welcome component
+localhost:3000/about-us -> Show About us component
+
+
+
+Normal scenario -
+Website loads 
+User click on any button -> (navigation perspective)
+1. url/address bar of browser will change (via native api's coming from window object)
+2. Entire new document/html is fetched from the server
+
+SPA/React ->
+
+For the 1st part -> we will not directly interact with native api's rather we will go for ->
+react-router-dom lib.
+
+For the 2nd part -> 
+Seems against SPA
+
+React-router-dom ->
+
+/ exact  -> component loads!
+/product -> Finally PRODUCT LOADS
+/product/1
+
+
+---------------
+
+User input ->
+
+/product
+
+
+
+------------
+
+myntra.com/ -> Homepage component Loads
+
+myntra.com/welcome -> Homepage component Loads
+
+
+---------
+
+myntra.com/ -> Transpose/Redirect it to -> myntra.com/welcome
+
+
+[1,2,3,4,5]
+
+/6
+
+[1,2,3,4,5,6]
+
+user back button ->
+
+[1,2,3,4,5]
+/5
+
+------------
+[1,2,3,4,5]
+
+/6
+[1,2,3,4,6]
+
+user press back btn ->
+
+[1,2,3,4]
+/4
